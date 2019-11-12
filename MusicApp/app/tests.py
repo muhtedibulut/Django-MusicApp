@@ -6,7 +6,6 @@ class MusicianTest(TestCase):
 
 
     def create_musician(self, first_name="a", last_name="b", instrument="a"):
-        # return Musician.object.create(first_name=first_name, last_name=last_name, instrument=instrument)
         return Musician(first_name=first_name, last_name=last_name, instrument=instrument)
 
 
