@@ -127,4 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .idea
+<<<<<<< HEAD
 .idea
+=======
+>>>>>>> feature/crud
