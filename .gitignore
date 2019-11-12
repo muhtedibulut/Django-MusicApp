@@ -126,11 +126,7 @@ venv.bak/
 dmypy.json
 
 # Pyre type checker
-.idea
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-.idea
-=======
->>>>>>> feature/crud
->>>>>>> release/0.1.0
+.pyre/
+
+# .idea
+.idea/
