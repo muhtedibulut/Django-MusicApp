@@ -1,8 +1,8 @@
 from django.urls import path
 from . import views
 
-urlpatterns = [
 
+urlpatterns = [
     path('', views.musician_list, name='musicianList'),
     path('view/<int:pk>', views.musician_view, name='musicianView'),
     path('new', views.musician_create, name='musicianNew'),
