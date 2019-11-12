@@ -4,7 +4,9 @@ from .models import Musician, Album, AlbumStatistic
 
 class MusicianTest(TestCase):
     def create_musician(self, first_name="a", last_name="b", instrument="a"):
-        return Musician(first_name=first_name, last_name=last_name, instrument=instrument)
+        return Musician(
+            first_name=first_name, last_name=last_name, instrument=instrument
+        )
 
     def test_musician_creation1(self):
         musician = self.create_musician()
