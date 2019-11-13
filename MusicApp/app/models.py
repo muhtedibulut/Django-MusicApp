@@ -27,4 +27,4 @@ class AlbumStatistic(models.Model):
     comment = models.IntegerField()
 
     def __str__(self):
-        return self.views
+        return "{}".format(self.views)

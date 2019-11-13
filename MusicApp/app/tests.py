@@ -14,7 +14,7 @@ class MusicianTest(TestCase):
 
     def test_musician_creation2(self):
         musician = self.create_musician()
-        self.assertEqual(musician.__str__(), musician.last_name)
+        self.assertEqual(musician.__str__(), musician.first_name)
 
 
 class AlbumTest(TestCase):
@@ -40,7 +40,7 @@ class AlbumStatisticTest(TestCase):
 
     def test_album_statstic_creation1(self):
         album_statistic = self.create_album_statistic()
-        self.assertEqual(album_statistic.__str__(), album_statistic.views)
+        self.assertEqual(album_statistic.__str__(), str(album_statistic.views))
 
 
 class SmokeTest(TestCase):

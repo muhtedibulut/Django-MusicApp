@@ -15,10 +15,21 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from rest_framework import routers
+from django.conf.urls import url
+from app import views
+
+
+router = routers.DefaultRouter()
+router.register(r"musician", views.MusicianViewSet)
+router.register(r"album", views.AlbumViewSet)
+router.register(r"albumstatistic", views.AlbumStatisticViewSet)
 
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", include("app.urls")),
+    # path("", include("app.urls")),
     path("app/", include("app.urls")),
+    url(r"^api-auth/", include("rest_framework.urls", namespace="rest_framework")),
+    url(r"^", include(router.urls)),
 ]

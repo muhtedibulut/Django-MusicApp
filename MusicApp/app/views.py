@@ -1,6 +1,12 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.forms import ModelForm
 from .models import Musician, Album, AlbumStatistic
+from rest_framework import viewsets
+from .serializers import (
+    MusicianSerializers,
+    AlbumSerializers,
+    AlbumStatisticSerializers,
+)
 
 
 class MusicianForm(ModelForm):
@@ -44,3 +50,18 @@ def musician_delete(request, pk, template_name="app/musicianDelete.html"):
         musician.delete()
         return redirect("musicianList")
     return render(request, template_name, {"object": musician})
+
+
+class MusicianViewSet(viewsets.ModelViewSet):
+    queryset = Musician.objects.all()
+    serializer_class = MusicianSerializers
+
+
+class AlbumViewSet(viewsets.ModelViewSet):
+    queryset = Album.objects.all()
+    serializer_class = AlbumSerializers
+
+
+class AlbumStatisticViewSet(viewsets.ModelViewSet):
+    queryset = AlbumStatistic.objects.all()
+    serializer_class = AlbumStatisticSerializers
