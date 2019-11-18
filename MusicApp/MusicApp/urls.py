@@ -32,8 +32,6 @@ router.register(r"albumstatistic", views.AlbumStatisticViewSet)
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    # path("", include("app.urls")),
-    # path("app/", include("app.urls")),
     url(r"^api-auth/", include("rest_framework.urls", namespace="rest_framework")),
     url(r"^", include(router.urls)),
     url(r"^api/token/", TokenObtainPairView.as_view(), name="token_obtain_pair"),
