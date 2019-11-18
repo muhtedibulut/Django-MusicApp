@@ -14,12 +14,16 @@ import os
 
 # Celery settings
 
-CELERY_BROKER_URL = 'amqp://admin:admin@localhost:5672'
-CELERY_ACCEPT_CONTENT = ['json']
-CELERY_TASK_SERIALIZER = 'json'  #CELERY_RESULT_BACKEND = 'db+sqlite:///results.sqlite'
-CELERY_RESULT_SERIALIZER = 'json'
-CELERY_RESULT_BACKEND = 'django-db'
-CELERY_CACHE_BACKEND = 'django-cache'
+# CELERY_BROKER_URL = 'amqp://admin:admin@localhost:5672' #rabbitmq-server connection
+CELERY_BROKER_URL = (
+    "redis://localhost:6379/0"  # redis-server connection redis//localhost:6379
+)
+CELERY_RESULT_BACKEND = "django-db"  # rabbitmq-server
+# CELERY_RESULT_BACKEND = 'redis://localhost:6379' #redis-server
+CELERY_ACCEPT_CONTENT = ["json"]
+CELERY_TASK_SERIALIZER = "json"  # CELERY_RESULT_BACKEND = 'db+sqlite:///results.sqlite'
+CELERY_RESULT_SERIALIZER = "json"
+CELERY_CACHE_BACKEND = "django-cache"
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
