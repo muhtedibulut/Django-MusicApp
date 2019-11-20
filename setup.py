@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="music-app-muhtedibulut",  # Replace with your own username
+    name="music_app-muhtedibulut",  # Replace with your own username
     version="0.0.1",
     author="Mühtedi BULUT",
     author_email="muhtedibulut@gmail.com",

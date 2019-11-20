@@ -1,9 +1,9 @@
 import os
 from celery import Celery
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "MusicApp.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "music_app.settings")
 
-app = Celery("MusicApp")
+app = Celery("music_app")
 app.config_from_object("django.conf:settings", namespace="CELERY")
 app.autodiscover_tasks()
 

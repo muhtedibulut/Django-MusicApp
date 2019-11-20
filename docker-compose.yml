@@ -5,7 +5,7 @@ services:
     image: postgres
   web:
     build: .
-    command: python MusicApp/manage.py runserver 0.0.0.0:8000
+    command: python music_app/manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/code
     ports:
