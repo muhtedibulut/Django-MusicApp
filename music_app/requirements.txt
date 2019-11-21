@@ -12,6 +12,7 @@ chardet==3.0.4
 Click==7.0
 coverage==4.5.4
 Django==2.2.7
+django-auth-ldap==2.0.0
 django-celery-results==1.1.2
 djangorestframework==3.10.3
 djangorestframework-simplejwt==4.3.0
@@ -27,10 +28,14 @@ pathspec==0.6.0
 pkginfo==1.5.0.1
 pluggy==0.13.0
 psycopg2==2.8.4
+psycopg2-binary==2.8.4
 py==1.8.0
+pyasn1==0.4.8
+pyasn1-modules==0.2.7
 Pygments==2.4.2
 PyJWT==1.7.1
 pyparsing==2.4.5
+python-ldap==3.2.0
 pytz==2019.3
 readme-renderer==24.0
 redis==3.3.11
